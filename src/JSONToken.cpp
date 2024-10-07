@@ -8,7 +8,7 @@ JSONToken::JSONToken(const ArrayType& ai) : type(TokenType::Array), data(ai){}
 JSONToken::JSONToken(const ObjectType& oi) : type(TokenType::Object), data(oi){}
 JSONToken::JSONToken(const std::nullptr_t& ni) : type(TokenType::Null), data(false){}
 
-TokenType JSONToken::Type() const{return type;}
+enum TokenType JSONToken::Type() const{return type;}
 bool JSONToken::IsNull() const{return type == TokenType::Null;}
 
 NumberType JSONToken::Number() const{return std::get<NumberType>(data);}

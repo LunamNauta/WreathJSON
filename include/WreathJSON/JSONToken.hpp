@@ -24,7 +24,7 @@ typedef std::variant<NumberType, StringType, BooleanType, ArrayType, ObjectType>
 
 struct JSONToken{
 private:
-    TokenType type;
+    enum TokenType type;
     DataType data;
 
 public:
@@ -36,7 +36,7 @@ public:
     JSONToken(const ObjectType&);
     JSONToken(const std::nullptr_t&);
 
-    TokenType Type() const;
+    enum TokenType Type() const;
     bool IsNull() const;
 
     NumberType Number() const;
