@@ -55,7 +55,7 @@ Function that converts the token to an std::string (the token itself will be val
 std::string ToString() const;
 ```
 
-### Files
+## Files
 
 A ```JSONFile``` is just a wrapper around a root ```JSONToken```.\
 Necessarily, this root will always be of type ```ObjectType```.
