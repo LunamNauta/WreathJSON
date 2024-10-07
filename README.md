@@ -6,7 +6,7 @@ on for it.
 
 ## Tokens
 
-Each JSON object is split into tokens. These tokens are: \
+Each JSON object is split into tokens. These tokens are:\
 ```enum class TokenType{Number, String, Boolean, Array, Object, Null}```\
 A ```JSONToken``` Is effectively a ```union``` of potential tokens.\
 The underlying types for the tokens are subject to change, but currently are equivalent to:
@@ -69,8 +69,7 @@ JSONFile(const ObjectType&);
 ```
 Accessors for the fields of the root ObjectType.\
 These will return ```JSONToken```s.\
-Each token must be cast to the appropriate type by calling the getter function for that type before the underlying\
-data is accessed.
+Each token must be cast to the appropriate type by calling the getter function for that type before the underlying data is accessed.
 ```
 JSONToken operator[](const std::string& name) const;
 JSONToken& operator[](const std::string& name);
