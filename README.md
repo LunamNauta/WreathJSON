@@ -2,6 +2,7 @@
 
 WreathJSON is an attempt to add JSON parsing capabilities to C++. Currently, only basic support for reading JSON is supported.\
 The API is too convoluted for easy use, so the next major addition will be a simplification to the API
+
 ## Tokens
 
 Each JSON object is split into tokens. These tokens are:\
