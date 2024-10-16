@@ -3,9 +3,9 @@
 "wreath-json" is an attempt to add JSON parsing capabilities to C++. Currently, only basic support for reading JSON is supported.\
 The API is too convoluted for easy use, so the next major addition will be a simplification to the API
 
-# Functionality (Everything is in the "wreath" namespace)
+# Functionality (Everything is in the "wreath::json" namespace)
 
-## Tokens (Everything is in the "wreath::json" namespace)
+## Tokens
 
 Each JSON object is split into tokens. These tokens are:\
 ```enum class token_t{Number, String, Boolean, Array, Object, Null}```\
@@ -57,7 +57,7 @@ Function that converts the token to an std::string (the token itself will be val
 std::string to_string() const;
 ```
 
-## Files (Everything is in the "wreath::json" namespace)
+## Files
 
 A ```File``` is just a wrapper around a root ```Token```.\
 Necessarily, this root will always be of type ```object_t```.
