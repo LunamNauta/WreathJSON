@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.5)
-project(WreathJSON)
+project(wreath-json)
 
 set(CMAKE_CXX_COMPILER clang++)
 set(CMAKE_CXX_STANDARD 23)
@@ -11,7 +11,7 @@ set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/lib)
 set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/lib)
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin)
 
-add_library(WreathLibJSON_Static STATIC ../src/JSONToken.cpp ../src/JSONFile.cpp)
-add_library(WreathLibJSON_Shared SHARED ../src/JSONToken.cpp ../src/JSONFile.cpp)
-target_include_directories(WreathLibJSON_Static PRIVATE ../include)
-target_include_directories(WreathLibJSON_Shared PRIVATE ../include)
+add_library(wreathjson_st STATIC ../src/wreath/json/token.cpp ../src/wreath/json/file.cpp)
+add_library(wreathjson_sh SHARED ../src/wreath/json/token.cpp ../src/wreath/json/file.cpp)
+target_include_directories(wreathjson_st PRIVATE ../include)
+target_include_directories(wreathjson_sh PRIVATE ../include)
